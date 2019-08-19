@@ -199,4 +199,20 @@ public class GildedRoseTest {
         Assert.assertEquals(0 ,actualItems[0].quality);
         Assert.assertEquals(-1 ,actualItems[0].sellIn);
     }
+
+    @Test
+    public void should_return_quality_is_2_and_sellIn_is_2_when_given_items_name_is_begin_with_sulfuras_and_its_sellIn_is_2_quality_is_2() throws Exception {
+        //given
+        Item item1 = new Item("Sulfuras, Hand of Ragnaros",2,2);
+        Item[] items = {item1};
+        GildedRose gildedRose = new GildedRose(items);
+
+        //when
+        gildedRose.updateQuality();
+        Item[] actualItems = gildedRose.getItems();
+
+        //then
+        Assert.assertEquals(2 ,actualItems[0].quality);
+        Assert.assertEquals(2 ,actualItems[0].sellIn);
+    }
 }
