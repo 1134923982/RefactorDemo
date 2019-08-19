@@ -121,7 +121,7 @@ public class GildedRoseTest {
         Assert.assertEquals(-1 ,actualItems[0].sellIn);
     }
     @Test
-    public void should_return_quality_decrement_0_and_sellIn_decrement_1_when_given_items_name_is_begin_with_backstage_and_its_sellIn_is_5_quality_is_10() throws Exception {
+    public void should_return_quality_add_3_and_sellIn_decrement_1_when_given_items_name_is_begin_with_backstage_and_its_sellIn_is_5_quality_is_10() throws Exception {
         //given
         Item item1 = new Item("Backstage passes to a TAFKAL80ETC concert",5,10);
         Item[] items = {item1};
@@ -134,5 +134,21 @@ public class GildedRoseTest {
         //then
         Assert.assertEquals(13 ,actualItems[0].quality);
         Assert.assertEquals(4 ,actualItems[0].sellIn);
+    }
+
+    @Test
+    public void should_return_quality_add_2_and_sellIn_decrement_1_when_given_items_name_is_begin_with_backstage_and_its_sellIn_is_6_quality_is_10() throws Exception {
+        //given
+        Item item1 = new Item("Backstage passes to a TAFKAL80ETC concert",6,10);
+        Item[] items = {item1};
+        GildedRose gildedRose = new GildedRose(items);
+
+        //when
+        gildedRose.updateQuality();
+        Item[] actualItems = gildedRose.getItems();
+
+        //then
+        Assert.assertEquals(12 ,actualItems[0].quality);
+        Assert.assertEquals(5 ,actualItems[0].sellIn);
     }
 }
