@@ -19,10 +19,10 @@ public class GildedRoseTest {
         Item[] actualItems = gildedRose.getItems();
 
         //then
-        Assert.assertEquals(0 ,actualItems[0].quality);
-        Assert.assertEquals(0 ,actualItems[0].sellIn);
-        Assert.assertEquals(1 ,actualItems[1].quality);
-        Assert.assertEquals(1 ,actualItems[1].sellIn);
+        Assert.assertEquals(0 ,actualItems[0].getQuality());
+        Assert.assertEquals(0 ,actualItems[0].getSellIn());
+        Assert.assertEquals(1 ,actualItems[1].getQuality());
+        Assert.assertEquals(1 ,actualItems[1].getSellIn());
     }
 
     @Test
@@ -37,8 +37,8 @@ public class GildedRoseTest {
         Item[] actualItems = gildedRose.getItems();
 
         //then
-        Assert.assertEquals(0 ,actualItems[0].quality);
-        Assert.assertEquals(-1 ,actualItems[0].sellIn);
+        Assert.assertEquals(0 ,actualItems[0].getQuality());
+        Assert.assertEquals(-1 ,actualItems[0].getSellIn());
     }
 
     @Test
@@ -53,8 +53,8 @@ public class GildedRoseTest {
         Item[] actualItems = gildedRose.getItems();
 
         //then
-        Assert.assertEquals(0 ,actualItems[0].quality);
-        Assert.assertEquals(-1 ,actualItems[0].sellIn);
+        Assert.assertEquals(0 ,actualItems[0].getQuality());
+        Assert.assertEquals(-1 ,actualItems[0].getSellIn());
     }
 
     @Test
@@ -69,8 +69,8 @@ public class GildedRoseTest {
         Item[] actualItems = gildedRose.getItems();
 
         //then
-        Assert.assertEquals(0 ,actualItems[0].quality);
-        Assert.assertEquals(-1 ,actualItems[0].sellIn);
+        Assert.assertEquals(0 ,actualItems[0].getQuality());
+        Assert.assertEquals(-1 ,actualItems[0].getSellIn());
     }
 
     @Test
@@ -85,8 +85,8 @@ public class GildedRoseTest {
         Item[] actualItems = gildedRose.getItems();
 
         //then
-        Assert.assertEquals(3 ,actualItems[0].quality);
-        Assert.assertEquals(1 ,actualItems[0].sellIn);
+        Assert.assertEquals(3 ,actualItems[0].getQuality());
+        Assert.assertEquals(1 ,actualItems[0].getSellIn());
     }
 
     @Test
@@ -101,8 +101,8 @@ public class GildedRoseTest {
         Item[] actualItems = gildedRose.getItems();
 
         //then
-        Assert.assertEquals(3 ,actualItems[0].quality);
-        Assert.assertEquals(-1 ,actualItems[0].sellIn);
+        Assert.assertEquals(3 ,actualItems[0].getQuality());
+        Assert.assertEquals(-1 ,actualItems[0].getSellIn());
     }
 
     @Test
@@ -117,8 +117,8 @@ public class GildedRoseTest {
         Item[] actualItems = gildedRose.getItems();
 
         //then
-        Assert.assertEquals(50 ,actualItems[0].quality);
-        Assert.assertEquals(-1 ,actualItems[0].sellIn);
+        Assert.assertEquals(50 ,actualItems[0].getQuality());
+        Assert.assertEquals(-1 ,actualItems[0].getSellIn());
     }
     @Test
     public void should_return_quality_add_3_and_sellIn_decrement_1_when_given_items_name_is_begin_with_backstage_and_its_sellIn_is_5_quality_is_10() throws Exception {
@@ -132,8 +132,8 @@ public class GildedRoseTest {
         Item[] actualItems = gildedRose.getItems();
 
         //then
-        Assert.assertEquals(13 ,actualItems[0].quality);
-        Assert.assertEquals(4 ,actualItems[0].sellIn);
+        Assert.assertEquals(13 ,actualItems[0].getQuality());
+        Assert.assertEquals(4 ,actualItems[0].getSellIn());
     }
 
     @Test
@@ -148,8 +148,8 @@ public class GildedRoseTest {
         Item[] actualItems = gildedRose.getItems();
 
         //then
-        Assert.assertEquals(12 ,actualItems[0].quality);
-        Assert.assertEquals(5 ,actualItems[0].sellIn);
+        Assert.assertEquals(12 ,actualItems[0].getQuality());
+        Assert.assertEquals(5 ,actualItems[0].getSellIn());
     }
 
     @Test
@@ -164,8 +164,8 @@ public class GildedRoseTest {
         Item[] actualItems = gildedRose.getItems();
 
         //then
-        Assert.assertEquals(11 ,actualItems[0].quality);
-        Assert.assertEquals(10 ,actualItems[0].sellIn);
+        Assert.assertEquals(11 ,actualItems[0].getQuality());
+        Assert.assertEquals(10 ,actualItems[0].getSellIn());
     }
 
     @Test
@@ -180,8 +180,8 @@ public class GildedRoseTest {
         Item[] actualItems = gildedRose.getItems();
 
         //then
-        Assert.assertEquals(0 ,actualItems[0].quality);
-        Assert.assertEquals(-1 ,actualItems[0].sellIn);
+        Assert.assertEquals(0 ,actualItems[0].getQuality());
+        Assert.assertEquals(-1 ,actualItems[0].getSellIn());
     }
 
     @Test
@@ -196,8 +196,8 @@ public class GildedRoseTest {
         Item[] actualItems = gildedRose.getItems();
 
         //then
-        Assert.assertEquals(0 ,actualItems[0].quality);
-        Assert.assertEquals(-1 ,actualItems[0].sellIn);
+        Assert.assertEquals(0 ,actualItems[0].getQuality());
+        Assert.assertEquals(-1 ,actualItems[0].getSellIn());
     }
 
     @Test
@@ -212,7 +212,7 @@ public class GildedRoseTest {
         Item[] actualItems = gildedRose.getItems();
 
         //then
-        Assert.assertEquals(2 ,actualItems[0].quality);
-        Assert.assertEquals(2 ,actualItems[0].sellIn);
+        Assert.assertEquals(2 ,actualItems[0].getQuality());
+        Assert.assertEquals(2 ,actualItems[0].getSellIn());
     }
 }
