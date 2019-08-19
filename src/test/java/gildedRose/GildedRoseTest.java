@@ -167,4 +167,20 @@ public class GildedRoseTest {
         Assert.assertEquals(11 ,actualItems[0].quality);
         Assert.assertEquals(10 ,actualItems[0].sellIn);
     }
+
+    @Test
+    public void should_return_quality_is_0_and_sellIn_decrement_1_when_given_items_name_is_begin_with_backstage_and_its_sellIn_is_0_quality_is_10() throws Exception {
+        //given
+        Item item1 = new Item("Backstage passes to a TAFKAL80ETC concert",0,10);
+        Item[] items = {item1};
+        GildedRose gildedRose = new GildedRose(items);
+
+        //when
+        gildedRose.updateQuality();
+        Item[] actualItems = gildedRose.getItems();
+
+        //then
+        Assert.assertEquals(0 ,actualItems[0].quality);
+        Assert.assertEquals(-1 ,actualItems[0].sellIn);
+    }
 }
