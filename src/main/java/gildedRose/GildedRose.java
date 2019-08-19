@@ -15,10 +15,14 @@ public class GildedRose {
 
     public void updateQuality() {
         IntStream.range(0, items.length).forEach(i -> {
-            calculateItemQuality(items[i]);
-            calculateItemSellIn(items[i]);
-            calculateItemQualityIfSellInLessThan0(items[i]);
+            updateItem(items[i]);
         });
+    }
+
+    private void updateItem(Item item) {
+        calculateItemQuality(item);
+        calculateItemSellIn(item);
+        calculateItemQualityIfSellInLessThan0(item);
     }
 
     private void calculateItemQualityIfSellInLessThan0(Item item) {
